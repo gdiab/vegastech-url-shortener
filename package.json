@@ -1,0 +1,29 @@
+{
+	"name": "vegastech-url-shortener",
+	"version": "0.0.1",
+	"description": "VegasTech url shortener",
+	"main": "shortener.js",
+	"contributors": [{
+	  	"name": "George Diab",
+	  	"email": "georgediab@goto10solutions.com"
+	}],
+	"scripts": {
+		"start": "mode shortener.js"
+	},
+	"keywords": [
+		"url",
+		"shortener",
+		"app",
+		"vegas",
+		"vegastech",
+		"GOTO10"
+	],
+	"author": "George Diab <georgediab@goto10solutions.com>",
+	"license": "MIT",
+	"dependencies": {
+		"hapi": "^14.1.0",
+		"inert": "^4.0.1",
+		"joi": "^9.0.4",
+		"mongoose": "^4.5.8"
+	}
+}
