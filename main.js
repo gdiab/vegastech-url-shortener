@@ -2,7 +2,7 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 const routes = require('./routes');
 const mongoose = require('mongoose');
-const mongoUri = process.env.MONGOURI || 'mondodb://localhost/vtshortner';
+const mongoUri = process.env.MONGOURI || 'mongodb://localhost/vtshortner';
 
 const options = {
 	server: {
@@ -30,7 +30,7 @@ server.register(require('inert'), (err) => {
 			server.start(err => {
 				if (err) throw err;
 
-				console.log('Server running at port ${server.info.port}');
+				console.log(`Server running at port ${server.info.port}`);
 			});
 		});
 });

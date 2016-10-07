@@ -76,5 +76,12 @@ module.exports = [
     handler(request, reply) {
       reply.file('public/' + request.params.file);
     }
+  },
+  {
+    method: 'GET',
+    path: '/public/images/{file}',
+    handler(request, reply) {
+      reply.file('public/images/' + request.params.file);
+    }
   }
 ];
