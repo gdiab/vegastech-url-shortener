@@ -16,7 +16,8 @@ const urlPattern = /^https?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 const redirSchema = new Schema({
   shortUrl: String,
   url: String,
-  createdAt: Date
+  createdAt: Date,
+  visits: {type: Number, default: 0}
 });
 
 const Redir = mongoose.model('Redir', redirSchema);
@@ -35,7 +36,19 @@ module.exports = [
 
       Redir.findOne(query, (err, redir) => {
         if (err) { return reply(err); }
-        else if (redir) { reply().redirect(redir.url); }
+        else if (redir) { 
+          // update visit count
+          console.log('Visit Count: ', redir.visits);
+
+          var currVisitCount = redir.visits+1;
+          console.log('Visit Count: ', currVisitCount);
+          redir.visits = currVisitCount;
+          redir.save(function (err, updatedRedir) {
+            if (err) return handleError(err);
+            reply().redirect(redir.url); 
+          });
+          
+        }
         else { reply.file('views/404.html').code(404); }
       });
     }

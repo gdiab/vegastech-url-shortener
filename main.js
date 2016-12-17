@@ -2,6 +2,7 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 const routes = require('./routes');
 const mongoose = require('mongoose');
+const Inert = require('inert');
 const mongoUri = process.env.MONGOURI || 'mongodb://localhost/vtshortner';
 
 const options = {
@@ -22,7 +23,7 @@ server.connection({
 	routes: { cors: true }
 });
 
-server.register(require('inert'), (err) => {
+server.register([Inert], (err) => {
 	db.on('error', console.error.bind(console, 'connection error:'))
 		.once('open', () => {
 			server.route(routes);
