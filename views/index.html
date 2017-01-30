@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shortio - Simple URL Shortener</title>
+    <title>VegasTe.ch URL Shortener</title>
     <meta name="description" content="A URL shortener for #VegasTech">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="public/styles.css">
   </head>
   <body>
@@ -17,13 +18,12 @@
       <nav>
         <div class="container">
           <div class="row">
-            <div class="column"><h1 class="logo">Shortio</h1></div>
-            <div class="column social">
-              <a href="http://codetuts.tech/">
-                <i class="fa fa-rss"></i>
-              </a>
-              <a href="https://github.com/luishendrix92/shortio">
-                <i class="fa fa-github"></i>
+            <div class="column"><a class="navbar-brand" href="http://vegaste.ch"><img src="/public/images/logo.png" alt="VegasTe.ch">
+        </a></div>
+            <div class="column">
+              <a href="http://goto10solutions.com/"><i id="social-10" class="fa fa-rss social"></i></a>
+              <a href="https://github.com/gdiab/vegastech-url-shortener">
+                <i id="social-gh" class="fa fa-github social"></i>
               </a>
             </div>
           </div>
@@ -32,7 +32,7 @@
 
       <div class="container">
         <div class="row desc">
-            <p>Simple, hassle-less URL shortener for your big hyperlinks! Save space and share content in a good way with Shortio, give it a try.<p>
+            <p>Simple, hassle-less URL shortener for your big hyperlinks! Give it a go!<p>
         </div>
       </div>
     </header>
@@ -62,7 +62,14 @@
           </div>
       </div>
     </main>
-
+    <footer>
+      <div class="pull right text-center center-block">
+              <a href="https://www.facebook.com/groups/vegastech/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+              <a href="https://twitter.com/VegasTech"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+              <a href="http://www.vegastech.com"><i id="social-gp" class="fa fa-external-link-square fa-3x social"></i></a>
+             
+</div>
+    </footer>
     <!-- Bluebird: Promise library for older browsers -->
     <script src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.min.js"></script>
     <!-- Axios: A simple promise based HTTP request library -->

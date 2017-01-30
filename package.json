@@ -8,7 +8,7 @@
 	  	"email": "georgediab@goto10solutions.com"
 	}],
 	"scripts": {
-		"start": "mode shortener.js"
+		"start": "node main.js"
 	},
 	"keywords": [
 		"url",
